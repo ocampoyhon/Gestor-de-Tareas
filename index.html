@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Tareas Escolares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Mis Tareas Escolares</h1>
+    <p class="subtitle">Organiza tus actividades y estudios</p>
+
+    <div class="form">
+      <input 
+        type="text" 
+        id="taskName" 
+        placeholder="¿Qué necesitas hacer? (Ej: Estudiar matemáticas)" 
+        autocomplete="off"
+        maxlength="100">
+      <select id="taskType">
+        <option value="Tarea">📝 Tarea/Deber</option>
+        <option value="Examen">📋 Examen/Prueba</option>
+        <option value="Proyecto">🎨 Proyecto/Trabajo</option>
+        <option value="Lectura">📖 Lectura</option>
+        <option value="Estudio">🧠 Estudiar/Repasar</option>
+        <option value="Exposicion">🎤 Exposición</option>
+      </select>
+      <input 
+        type="text" 
+        id="taskCategory" 
+        placeholder="Materia (Ej: Matemáticas, Historia, Ciencias)" 
+        autocomplete="off"
+        maxlength="50">
+      <button id="addTask">✨ Agregar Tarea</button>
+    </div>
+
+    <div class="progress-section">
+      <div class="progress-label">Tu progreso</div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <span class="progress-text" id="progressText">0%</span>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button id="filterAll" class="active">📋 Todas</button>
+      <button id="filterCompleted">✅ Completadas</button>
+      <button id="filterPending">⏳ Pendientes</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number" id="totalTasks">0</div>
+        <div class="stat-label">Total</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="pendingTasks">0</div>
+        <div class="stat-label">Por hacer</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="completedTasks">0</div>
+        <div class="stat-label">Hechas</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
